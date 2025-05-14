@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Notely – AI-Powered Note-Taking App
 
-## Getting Started
+**Notely** is a smart, minimal, and powerful note-taking web application designed to enhance productivity using AI assistance. Built with modern web technologies, Notely ensures a smooth experience across devices while offering user authentication, secure storage, and intelligent note management.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 🔐 **Authentication & Authorization** using Supabase
+- 🧠 **AI-Powered Suggestions** for note summarization (coming soon)
+- 📝 **Create, Edit, and Manage Notes** with ease
+- 🔄 **Auto Save** with real-time updates
+- 🔎 **Smart Search** across your notes
+- 🌙 **Dark Mode** support
+- 🧱 **Built with:**
+  - Next.js (App Router)
+  - Supabase (Auth + Database)
+  - Prisma (ORM)
+  - PostgreSQL
+  - Tailwind CSS
+  - TypeScript
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/notely.git
+cd notely
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+```env
+# Supabase
+SUPABASE_URL=https://your-supabase-url.supabase.co
+SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/notely
+
+# App
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
+### 4.  Set Up Prisma
+
+```bash
+npx prisma generate
+npx prisma migrate dev --name init
+```
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Authentication & Authorization
+- User authentication is powered by Supabase Auth.
+- Middleware ensures protected routes redirect unauthorized users to the login page.
+- Users are redirected to their latest note upon login.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
+- Frontend: Next.js 15, Tailwind CSS
+- Auth: Supabase Auth
+- Database: PostgreSQL (via Supabase)
+- ORM: Prisma
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  ## Coming Soon
+- AI summarization and note rewriting
 
-## Learn More
+- Tagging and categorization
 
-To learn more about Next.js, take a look at the following resources:
+- Note sharing with permissions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Offline mode
