@@ -27,7 +27,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/notely.git
+git clone https://github.com/karmat-1/notely.git
 cd notely
 ```
 
@@ -42,7 +42,6 @@ npm install
 # Supabase
 SUPABASE_URL=https://your-supabase-url.supabase.co
 SUPABASE_ANON_KEY=your-anon-key
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 
 # Database
 DATABASE_URL=postgresql://user:password@localhost:5432/notely
@@ -68,7 +67,7 @@ npm run dev
 - Users are redirected to their latest note upon login.
 
 ## Tech Stack
-- Frontend: Next.js 15, Tailwind CSS
+- Frontend: Next.js 15, Tailwind CSS shadcn
 - Auth: Supabase Auth
 - Database: PostgreSQL (via Supabase)
 - ORM: Prisma
